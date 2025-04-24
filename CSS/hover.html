@@ -8,6 +8,10 @@
         border-radius: 5px;
         cursor: pointer;
         margin-right: 15px;
+
+        /* transition */
+
+        transition:opacity 0.15 s ;
     }
     .JOIN {
         background-color: white;
@@ -20,6 +24,7 @@
         border-radius: 2px ; 
         cursor: pointer;
         margin-right:15px ;
+
 
     }
     .X {
@@ -37,14 +42,34 @@
 
 /* when hovering */
     .subscribe-button:hover{
-        opacity: 0.5;
-        background-color: yellowgreen;
-        color:black;
+        opacity: 0.4;
+        color: rgb(157, 0, 0);
+        background-color: black;
     }
 
-/* when clicking */
+/* when clicking */ 
     .subscribe-button:active{
+        opacity: 0.2;
         background-color: pink;
+    }
+
+
+    .JOIN:hover{
+        background-color: blue;
+        color:white ;
+        border-color: white ;
+
+        transition:
+            background-color 1s,
+            color 1s  ;
+    }
+
+
+
+    .X:hover{
+        box-shadow: 2px   2px   5px    rgba(47, 47, 249, 0.662);
+    /* four values  ver   hor   blur   color shadow the fourth value denotes the opacity  */
+        transition: box-shadow 0.17s;
     }
 
 </style>
