@@ -1,0 +1,74 @@
+
+.subscribe-button {
+    background-color: rgb(157, 0, 0);
+    color: black;
+    height: 36px;
+    width: 105px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 15px;
+
+    /* transition */
+
+    transition:opacity 0.15 s ;
+}
+.JOIN {
+    background-color: white;
+    height :35px;
+    width: 96px;
+    color: blue ;
+    border-color: rgba(47, 47, 249, 0.662);
+    border-style:solid ;
+    border-width: 1px;
+    border-radius: 2px ; 
+    cursor: pointer;
+    margin-right:15px ;
+
+
+}
+.X {
+    color: white;
+    background-color: rgb(26, 114, 245);
+    border:none;
+    border-radius: 25px ;
+    font-size: small;
+    border-width: 1px;
+    height: 30px;
+    cursor: pointer;
+
+}
+
+
+/* when hovering */
+.subscribe-button:hover{
+    opacity: 0.4;
+    color: rgb(157, 0, 0);
+    background-color: black;
+}
+
+/* when clicking */ 
+.subscribe-button:active{
+    opacity: 0.2;
+    background-color: pink;
+}
+
+
+.JOIN:hover{
+    background-color: blue;
+    color:white ;
+    border-color: white ;
+
+    transition:
+        background-color 1s,
+        color 1s  ;
+}
+
+
+
+.X:hover{
+    box-shadow: 2px   2px   5px    rgba(47, 47, 249, 0.662);
+/* four values  ver   hor   blur   color shadow the fourth value denotes the opacity  */
+    transition: box-shadow 0.17s;
+}
+
