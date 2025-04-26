@@ -1,17 +1,53 @@
 
 <style>
+    p{
+    font-family: 'Franklin Gothic Medium';
+}
+
+
+
+
     .title{
-        font-family: Arial;
+        
         font-size: 30px;
         font-weight: bold;
         font-style: bold;
         text-align: left;
         width:250px
+    }
 
+    .info{
+        
+        font-size: 50px;
+        width: 100px;
+        font-weight: bold;
+        line-height: 50px;
+    }
 
+    .basic{
+        background-color: red;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 30px;
+    }
+
+    .txt-element{
+        background-color: red;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 30px;
     }
 
 
+    .span-eg{
+        color: chartreuse;
+    }
+    .span-eg:hover{
+        text-decoration: underline;
+        cursor: pointer;
+    }
 
 
 </style>
@@ -22,4 +58,24 @@
 
 <p class="title">
     A Cloud & DevOps explorer and a Linux enthusiast.
+</p>
+
+<p class="info">
+Glad that I have been an opensource contributor
+</p>
+
+
+<p class="basic">
+    The godfather 2 is the best movie ever made in the time period during the 70s
+</p>
+
+<p class="txt-element">
+    <!-- strong -> bold
+         u -> Underlines
+         span -> does nothing but could be used 
+         to create a class targeting specific text -->
+
+    The <strong> godfather 2 </strong>
+     the <span class="span-eg"> best movie ever made </span>
+      in the <u>time period during the 70s</u>
 </p>
