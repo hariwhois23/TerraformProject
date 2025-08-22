@@ -1,0 +1,46 @@
+name: 
+    Terraform CI pipeline for infra deployment
+
+run-name: 
+    ${( github.actor )} has triggered the following action
+
+on:
+    push:
+        branches:
+            - 'main'
+
+
+env: 
+    AWS_ACCESS_KEY: ${(secrets.AWS_ACCESS_KEY)} #this is passes in github as a secret
+    AWS_SECRET_KEY: ${(secrets.AWS_SECRET_KEY)}
+
+jobs:
+    build-infra:
+        name: "Terrafrom infrastructure build"
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2 #plugin name
+
+            - name: Terraform Setup
+              uses: hashicorp/setup-terraform@v2 #plugin name
+
+            - name: Terraform initialization
+              id : init #to identify within the pipeline script
+              run: terraform init #runs the following command on the runner
+              working-directory: ./Terraform-VPC #where the command has to be executed
+            
+            - name: Terraform validation
+              id : validate
+              run: terraform validate
+              working-directory: ./Terraform-VPC
+
+            - name: Terraform planning 
+              id : plan
+              run: terraform plan
+              working-directory: ./Terraform-VPC
+
+            - name: Terraform final deployment
+              id : apply
+              run: terraform apply --auto-approve
+              working-directory: ./Terraform-VPC
