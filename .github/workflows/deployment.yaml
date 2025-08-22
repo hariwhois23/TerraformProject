@@ -11,8 +11,9 @@ on:
 
 
 env: 
-    AWS_ACCESS_KEY: ${(secrets.AWS_ACCESS_KEY)} #this is passes in github as a secret
-    AWS_SECRET_KEY: ${(secrets.AWS_SECRET_KEY)}
+    AWS_ACCESS_KEY_ID: ${( secrets.AWS_ACCESS_KEY )} #this is passes in github as a secret
+    AWS_SECRET_ACCESS_KEY_ID: ${( secrets.AWS_SECRET_KEY )}
+    
 
 jobs:
     build-infra:
