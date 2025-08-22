@@ -8,6 +8,7 @@ on:
     push:
         branches:
             - 'main'
+        
 
 
 # env: 
@@ -26,6 +27,7 @@ jobs:
             - name: Terraform Setup
               uses: hashicorp/setup-terraform@v2 #plugin name
             
+            #use this insead of assiging environment variables for login credentials
             - name: Configure AWS credentials
               uses: aws-actions/configure-aws-credentials@v4
               with:

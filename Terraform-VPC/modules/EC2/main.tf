@@ -11,7 +11,7 @@ resource "aws_instance" "web" {
     http_tokens   = "required" # Enforces IMDSv2
     http_endpoint = "enabled"  # Ensures metadata service is available
   }
-
+  #bash script contains thalaivar dialogue site
   user_data = <<EOF
   
 #!/bin/bash
