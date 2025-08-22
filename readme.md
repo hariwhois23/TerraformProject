@@ -91,28 +91,6 @@ AWS Cloud Environment
 Your AWS credentials need the following permissions:
 - EC2 (VPC, instances, security groups)
 - Elastic Load Balancing
-- IAM (for instance profiles, if used)
+- IAM User
 
-### Local Development Setup
-
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd <repository-name>
-   ```
-
-2. **Configure variables**
-   ```bash
-   cd Terraform-VPC
-   cp terraform.tfvars.example terraform.tfvars
-   # Edit terraform.tfvars with your values
-   ```
-
-3. **Initialize and deploy**
-   ```bash
-   terraform init
-   terraform validate
-   terraform plan
-   terraform apply
-   ```
 
